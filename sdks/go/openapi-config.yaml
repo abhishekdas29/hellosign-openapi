@@ -1,0 +1,39 @@
+generatorName: go
+additionalProperties:
+#  library: jersey2
+#  openApiNullable: false
+  invokerPackage: "dropboxsign"
+  packageName: "dropboxsign"
+  structPrefix: true
+#  apiPackage: com.dropbox.sign.api
+#  modelPackage: com.dropbox.sign.model
+#  developerEmail: apisupport@hellosign.com
+#  developerId: dropbox-sign-api-team
+#  developerName: Dropbox Sign API Team
+#  developerOrganization: Dropbox Sign
+#  developerOrganizationUrl: https://hellosign.com
+#  hideGenerationTimestamp: true
+  sortModelPropertiesByRequiredFlag: true
+#  groupId: com.dropbox.sign
+#  artifactId: dropbox-sign
+  artifactName: Dropbox Sign Go SDK
+  artifactVersion: 1.1-dev
+  artifactUrl: https://github.com/hellosign/dropbox-sign-go
+  artifactDescription: Use the Dropbox Sign Java SDK to connect your Go app to the service of Dropbox Sign in microseconds!
+  scmConnection: scm:git:git://github.com/hellosign/dropbox-sign-go.git
+  scmDeveloperConnection: scm:git:git@github.com:hellosign/dropbox-sign-go.git
+  scmUrl: https://github.com/hellosign/dropbox-sign-go
+#  licenseName: MIT License
+#  licenseUrl: https://www.opensource.org/licenses/mit-license.php
+
+#
+#files:
+#  EventCallbackHelper.mustache:
+#    templateType: SupportingFiles
+#    destinationFilename: src/main/java/com/dropbox/sign/EventCallbackHelper.java
+#  VERSION.mustache:
+#    templateType: SupportingFiles
+#    destinationFilename: VERSION
+globalProperties:
+  apiTests: false
+  modelTests: false

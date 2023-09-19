@@ -3,7 +3,7 @@
 set -e
 
 DIR=$(cd `dirname $0` && pwd)
-SDKS=( dotnet java node php python ruby )
+SDKS=( dotnet java node php python ruby go )
 SHOW_HELP=0
 TARGET_SDK=
 
@@ -73,7 +73,8 @@ function validate_sdk_choice()
     "${SDK}" != "node" &&
     "${SDK}" != "php" &&
     "${SDK}" != "python" &&
-    "${SDK}" != "ruby"
+    "${SDK}" != "ruby" &&
+    "${SDK}" != "go"
   ]]; then
     printf "Invalid SDK (-t) value: ${SDK}\n"
     show_help
