@@ -16,16 +16,9 @@ docker run --rm \
     -t "/local/templates" \
     -o "/local"
 
-#printf "\nInstalling composer dependencies ...\n"
-#mkdir -p "${DIR}/vendor"
-#bash "${DIR}/bin/php" composer install
-#printf "\n"
-
-#printf "Adding examples to Docs ...\n"
-#bash "${DIR}/bin/php" ./bin/generate-examples.php
-
-#printf "Running php-cs-fixer ...\n"
-#bash "${DIR}/bin/php" ./vendor/bin/php-cs-fixer fix --verbose
+printf "\nMoving go files to src ...\n"
+mkdir -p "${DIR}/src"
+find "${DIR}" -maxdepth 1 -name "*.go" -exec mv {} "${DIR}/src/" \;
 
 printf "Replacing strings ...\n"
 docker run --rm \
