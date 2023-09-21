@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+DIR=$(cd `dirname $0` && pwd)
+ROOT_DIR="${DIR}/.."
+
+
+## replace the file names in sdks/go/.openapi-generator/FILES
+awk '/^.*.go$/ { $0 = "src/" $0 }; 1' "${ROOT_DIR}/.openapi-generator/FILES" > "${ROOT_DIR}/.openapi-generator/FILES1"
+mv "${ROOT_DIR}/.openapi-generator/FILES1" "${ROOT_DIR}/.openapi-generator/FILES"
